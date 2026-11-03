@@ -1,0 +1,21 @@
+/* 1. 태그 선택자 */
+p {
+  color: #475569;
+}
+
+div {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* 2. 클래스 선택자 */
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+/* 3. 아이디 선택자 */
+#green {
+  color: green;
+  font-weight: bold;
+}

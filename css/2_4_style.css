@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "박다현체";
+  src: url("./온글잎 박다현체.ttf");
+}
+
+div {
+  font-family: "박다현체";
+  font-size: 24px;
+  color: hotpink;
+}
