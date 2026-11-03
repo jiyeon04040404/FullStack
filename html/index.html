@@ -1,60 +1,97 @@
 <!DOCTYPE html>
 <!--
-  [춘봉이 프로필 카드 페이지]
-  - 첫 번째 소개 페이지 내용을 카드 형태로 꾸민 웹페이지 (HTML + CSS)
-  - 전체 내용을 div.profile-card로 감싸서 하나의 카드처럼 스타일 적용
-  - 구조: header(인사말) / main(소개, 좋아하는 것, 링크) / footer
-  - 디자인은 style3.css 파일에서 적용
+  [춘봉이 포털 페이지]
+  - 춘봉이 소개 내용을 포털 사이트 메인 화면 분위기로 꾸민 웹페이지 (HTML + CSS)
+  - 구조:
+    header.top (로고 + 검색창 + 메뉴바)
+    div.container
+      main.content (인사말, 춘봉이 소개, 좋아하는 것)
+      aside.side   (프로필 박스, 링크 박스)
+    footer (하단 링크 + 저작권)
+  - 디자인은 ../css/index_style.css 파일에서 적용 (연핑크 테마)
 -->
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style3.css">
+    <link rel="stylesheet" href="../css/index_style.css">
     <title>춘봉이는 신이다</title>
 </head>
 <body>
-    <div class="profile-card">
-        <header>
-            <h1>안녕하세요, 신도 1입니다!</h1>
-            <p>오늘은 제가 모시는 신을 소개드리려 합니다.</p>
-        </header>
+    <!-- 상단: 로고 + 검색창 + 메뉴 -->
+    <header class="top">
+        <div class="top-inner">
+            <a class="logo" href="#">춘봉이</a>
 
-        <main>
-            <section>
-            <h2>춘봉이에 대해</h2>
+            <form class="search" onsubmit="return false">
+                <input type="text" placeholder="춘봉이에 대해 검색해 보세요">
+                <button type="submit">검색</button>
+            </form>
+        </div>
 
-            <img
-                src="춘2.jpg"
-                alt="'그녀'의 존안"
-                width="200"
-            >
+        <nav class="menu">
+            <a href="#about">소개</a>
+            <a href="#likes">좋아하는 것</a>
+            <a href="#links">링크</a>
+            <a href="#">관찰일기</a>
+            <a href="#">사진첩</a>
+        </nav>
+    </header>
 
-            <p>춘봉이는 경주에 사는 어느 한 박씨 집안의 여섯째입니다.</p>
-            <p>취미는 땅굴 파기와 챗바퀴 굴리기입니다.</p>
+    <div class="container">
+        <!-- 왼쪽: 본문 -->
+        <main class="content">
+            <section class="box greeting">
+                <h1>안녕하세요, 신도 1입니다!</h1>
+                <p>오늘은 제가 모시는 신을 소개드리려 합니다.</p>
             </section>
 
-            <section>
-            <h2>좋아하는 것</h2>
+            <section class="box" id="about">
+                <h2>춘봉이에 대해</h2>
 
-            <ul>
-                <li>채소, 과일 다 잘 먹습니다.</li>
-                <li>집사가 퇴근하고 이름을 불러줄 때, 쪼르르 달려나가기</li>
-                <li>먹는 것</li>
-            </ul>
+                <div class="article">
+                    <img src="춘2.jpg" alt="'그녀'의 존안">
+                    <div>
+                        <p>춘봉이는 경주에 사는 어느 한 박씨 집안의 여섯째입니다.</p>
+                        <p>취미는 땅굴 파기와 챗바퀴 굴리기입니다.</p>
+                    </div>
+                </div>
             </section>
 
-            <section>
-            <h2>춘봉이를 모시는 집사의 친구가 운영하는 깃 링크</h2>
+            <section class="box" id="likes">
+                <h2>좋아하는 것</h2>
 
-            <p>
-                <a href="https://github.com/">GitHub</a>
-            </p>
+                <ul>
+                    <li>채소, 과일 다 잘 먹습니다.</li>
+                    <li>집사가 퇴근하고 이름을 불러줄 때, 쪼르르 달려나가기</li>
+                    <li>먹는 것</li>
+                </ul>
             </section>
         </main>
 
-        <footer>
-            <p>춘봉이 관찰 기록</p>
-        </footer>
+        <!-- 오른쪽: 사이드 -->
+        <aside class="side">
+            <div class="box profile">
+                <img src="춘2.jpg" alt="춘봉이 프로필 사진">
+                <p class="name">춘봉이</p>
+                <p class="desc">신도 1님, 오늘도 춘봉이를 찾아주셔서 감사합니다.</p>
+            </div>
+
+            <div class="box" id="links">
+                <h2>집사 친구의 깃 링크</h2>
+                <a class="btn" href="https://github.com/">GitHub 바로가기</a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 하단 -->
+    <footer>
+        <nav>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">고객센터</a>
+        </nav>
+        <p>© 춘봉이 관찰 기록</p>
+    </footer>
 </body>
 </html>
