@@ -1,0 +1,137 @@
+<!--
+  [춘봉 포털 메인 페이지]
+  - 포털 사이트 메인 화면 스타일의 연핑크 테마 웹페이지
+  - 상단: 로고 + 검색창 + 바로가기 메뉴
+  - 본문: 왼쪽(뉴스, 추천 콘텐츠) / 오른쪽(로그인, 날씨, 실시간 인기) 2단 구성
+  - 모바일에서는 1단으로 바뀜 (스타일: ../css/portal_style.css)
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>춘봉 - 나만의 포털</title>
+  <link rel="stylesheet" href="../css/portal_style.css">
+</head>
+<body>
+
+  <!-- 상단: 로고 + 검색창 -->
+  <header class="header">
+    <a href="#" class="logo">춘봉</a>
+    <form class="search-box" action="#" onsubmit="return false;">
+      <input type="text" class="search-input" placeholder="검색어를 입력해 주세요">
+      <button type="submit" class="search-btn">검색</button>
+    </form>
+
+    <!-- 바로가기 아이콘 메뉴 -->
+    <nav class="shortcut">
+      <a href="#" class="shortcut-item"><span class="icon">✉️</span>메일</a>
+      <a href="#" class="shortcut-item"><span class="icon">☕</span>카페</a>
+      <a href="#" class="shortcut-item"><span class="icon">📝</span>블로그</a>
+      <a href="#" class="shortcut-item"><span class="icon">🛍️</span>쇼핑</a>
+      <a href="#" class="shortcut-item"><span class="icon">📰</span>뉴스</a>
+      <a href="#" class="shortcut-item"><span class="icon">🗺️</span>지도</a>
+      <a href="#" class="shortcut-item"><span class="icon">📈</span>증권</a>
+      <a href="#" class="shortcut-item"><span class="icon">🎬</span>웹툰</a>
+    </nav>
+  </header>
+
+  <!-- 본문: 2단 구성 -->
+  <div class="container">
+
+    <!-- 왼쪽(넓게) -->
+    <main class="main">
+      <section class="card">
+        <h2 class="card-title">오늘의 뉴스</h2>
+        <ul class="news-list">
+          <li class="news-item">
+            <img src="chun.jpg" alt="뉴스 이미지" class="news-img">
+            <div class="news-text">
+              <a href="#" class="news-headline">춘봉이, 오늘도 산책길에서 인기 만점</a>
+              <p class="news-desc">동네 주민들 사이에서 '산책 아이돌'로 불리는 춘봉이의 하루를 따라가 봤습니다.</p>
+              <span class="news-meta">춘봉일보 · 10분 전</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <img src="chun2.jpg" alt="뉴스 이미지" class="news-img">
+            <div class="news-text">
+              <a href="#" class="news-headline">11월 첫 주, 따뜻한 날씨 이어져</a>
+              <p class="news-desc">이번 주는 낮 기온이 평년보다 높아 야외 활동하기 좋겠습니다.</p>
+              <span class="news-meta">핑크뉴스 · 32분 전</span>
+            </div>
+          </li>
+          <li class="news-item">
+            <img src="chun3.jpg" alt="뉴스 이미지" class="news-img">
+            <div class="news-text">
+              <a href="#" class="news-headline">풀스택 개발 공부, HTML·CSS부터 차근차근</a>
+              <p class="news-desc">웹 개발 입문자를 위한 기초 학습 로드맵을 소개합니다.</p>
+              <span class="news-meta">테크타임즈 · 1시간 전</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">오늘의 추천 콘텐츠</h2>
+        <div class="recommend-grid">
+          <a href="#" class="recommend-item">
+            <img src="chun.jpg" alt="추천 이미지">
+            <p>춘봉이의 귀여운 순간 모음</p>
+          </a>
+          <a href="#" class="recommend-item">
+            <img src="chun2.jpg" alt="추천 이미지">
+            <p>주말에 가기 좋은 산책 코스</p>
+          </a>
+          <a href="#" class="recommend-item">
+            <img src="chun3.jpg" alt="추천 이미지">
+            <p>반려견과 함께하는 카페 추천</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- 오른쪽(좁게) -->
+    <aside class="side">
+      <section class="card login-box">
+        <p class="login-text">춘봉을 더 안전하고 편리하게 이용하세요</p>
+        <a href="#" class="login-btn">춘봉 로그인</a>
+        <div class="login-links">
+          <a href="#">아이디 찾기</a> · <a href="#">비밀번호 찾기</a> · <a href="#">회원가입</a>
+        </div>
+      </section>
+
+      <section class="card weather-box">
+        <h2 class="card-title">오늘의 날씨</h2>
+        <div class="weather-main">
+          <span class="weather-icon">☀️</span>
+          <div>
+            <p class="weather-temp">18°C</p>
+            <p class="weather-desc">서울 · 맑음</p>
+          </div>
+        </div>
+        <p class="weather-sub">최저 9° / 최고 20° · 미세먼지 좋음</p>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">실시간 인기</h2>
+        <ol class="rank-list">
+          <li><span class="rank">1</span><a href="#">춘봉이 산책</a></li>
+          <li><span class="rank">2</span><a href="#">11월 날씨</a></li>
+          <li><span class="rank">3</span><a href="#">HTML 기초</a></li>
+          <li><span class="rank">4</span><a href="#">CSS 반응형</a></li>
+          <li><span class="rank">5</span><a href="#">강아지 간식</a></li>
+          <li><span class="rank">6</span><a href="#">주말 나들이</a></li>
+          <li><span class="rank">7</span><a href="#">카페 추천</a></li>
+        </ol>
+      </section>
+    </aside>
+
+  </div>
+
+  <!-- 하단 -->
+  <footer class="footer">
+    <p>© 2026 춘봉 Corp. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
